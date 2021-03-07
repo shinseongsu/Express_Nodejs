@@ -1,0 +1,16 @@
+{
+  "name": "ch1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ExpressServer.js",
+  "scripts": {
+    "start": "nodemon ExpressServer.js",
+    "dev": "nodemon ExpressServer.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
