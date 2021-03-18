@@ -68,3 +68,45 @@ db.board.insert([
 
 ![inserts](Resource/mongo_inserts.png)
 ![mongo](Resource/mongo_Campass1.png)
+
+
+- DB 값을 조회하는 방법
+
+```
+db.person.find()
+```
+
+![find](Resource/mongo_find.png)
+
+
+> find() 뒤에 count(), sort(), limit(), skip() 등 여러 함수를 사용 할 수 있다.
+
+
+- DB 값 변경하기
+
+DB 값을 변경하기 위해서는 db.person.update 와 같은 형식으로 사용을 한다.
+
+update 안에 조건문과 변경될 같은 넣으면 된다.
+예를 들어, lecture 값이 node.js인 값을 바꾸고 싶으면 밑에와 같이 사용하면 된다.
+
+```
+db.person.update( 
+    { "name" : "shinseongsu" }, 
+    { $set: { "lecture" : "mongoDB" } } 
+)
+```
+$set은 변경 되지 않는 부분은 사라지지 않기 위해서 썼다.
+
+![update](Resource/mongo_update.png)
+
+결과적으로 node.js 를 mongoDB로 변경이 되었다.
+
+- DB 값 제거
+
+remove 를 이용하여 안에 조건값을 넣어 값을 삭제할 수 있다.
+
+```
+db.person.remove( { "name" : "shinseongsu" } )
+```
+
+![remove](Resource/mongo_remove.png)
