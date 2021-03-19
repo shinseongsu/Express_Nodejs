@@ -56,3 +56,28 @@ socket.emit();
 <br><br>
 ![project4](Resource/project4.png)
 
+
+
+- 서버 증설 시 고려점
+
+> 세션의 공유
+redis으로 저장 후 사용
+
+
+- 서버 확충
+
+```
+docker-compose build
+docker-compose up
+```
+
+![docker-build](Resource/dokcer-build.png)
+
+<br><br>
+
+![docker-up](Resource/docker-up.png)
+
+
+docker로 실행 후, 제대로 실행되는지 확인
+
+![docker-image](Resource/docker-chat.png)
